@@ -23,8 +23,8 @@ def main():
             
     # for-loop across astros
     # display book names
-    for astro in data:
-        print("Book name is", astro['name'])
+    for x in data:
+        print("Book name is", x['name'])
 
 if __name__ == '__main__':
     main()
