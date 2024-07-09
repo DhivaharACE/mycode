@@ -21,17 +21,8 @@ def main():
     # to python data types
     data = resp.json()
             
-    # display our Pythonic data
-    #print("\n\nConverted Python data")
-    #print(data)
-    
-    #print('\n\nPeople in Space: ', data.get('number'))
-    
-    #astros = data.get('') # people is a list of dict
-    #print(astros) # this is the list of dict
-
     # for-loop across astros
-    # display names of those in space
+    # display book names
     for astro in data:
         print("Book name is", astro['name'])
 
