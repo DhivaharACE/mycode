@@ -1,0 +1,21 @@
+---
+- name: looping across a list var with "loop"
+  hosts: localhost
+  connection: local
+    #gather_facts: false
+
+   
+  vars:
+    url: https://anapioficeandfire.com/api/characters/583
+          
+  tasks:
+   - name: "Get Aliases of Jon Snow"
+     ansible.builtin.uri:
+       url: "{{ url }}"
+     register: aliaseslist
+
+   - name: show off aliases
+     debug:    
+       msg: "{{ item }}"
+     loop: "{{ aliaseslist.json.aliases }}"
+
