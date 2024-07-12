@@ -1,0 +1,12 @@
+- hosts: bender
+
+  tasks:
+
+  - debug:
+      msg: "hello world"
+
+  - name: install necessary applications
+    apt:
+      state: present
+      name: sl
+    become: true
